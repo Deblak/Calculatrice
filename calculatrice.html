@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script type="text/javascript" src="scripts/calculatrice.js" defer></script>
+        <title>Calculatrice</title>
+    </head>
+    <body>
+        <!-- Section principale pour l'affichage de la calculatrice -->
+        <main>
+            <article class="calculatrice">
+                <table>
+                    <!-- En-tête de tableau pour la calculatrice -->
+                    <caption>Calculatrice</caption>
+                    <tr>
+                         <!-- Affichage du résultat -->
+                        <td colspan="4">
+                            <input type="text" id="display" class="output">
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Ligne 1 pour les parenthèses et la division -->
+                        <td><input type="button" value="(" class="operator" onClick="display('(')"></input> </td>
+                        <td><input type="button" value="/" class="operator" onClick="display('/')"></input> </td>
+                        <td><input type="button" value=")" class="operator" onClick="display(')')"></input> </td>
+                        <td><input type="button" value="DEL" onclick="deleteScreen()" class="deleteScreen"> </td>
+                    </tr>
+                    <tr>
+                        <!-- Ligne 2 pour les nombres de 7 à 9 et la multiplication -->
+                        <td><input type="button" value="7" class="button" onClick="display('7')"> </td>
+                        <td><input type="button" value="8" class="button" onClick="display('8')"> </td>
+                        <td><input type="button" value="9" class="button" onClick="display('9')"> </td>
+                        <td><input type="button" value="x" class="operator" onClick="display('*')"></input> </td>  
+                    </tr>
+                    <tr>
+                        <!-- Ligne 3 pour les nombres de 4 à 6 et la soustraction -->
+                        <td><input type="button" value="4" class="button" onClick="display('4')"> </td>
+                        <td><input type="button" value="5" class="button" onClick="display('5')"> </td>
+                        <td><input type="button" value="6" class="button" onClick="display('6')"> </td>
+                        <td><input type="button" value="-" class="operator" onClick="display('-')"></input> </td>  
+                    </tr>
+                    <tr>
+                        <!-- Ligne 4 pour les nombres de 3 à 1 et l'addition -->
+                        <td><input type="button" value="3" class="button" onClick="display('3')"> </td>
+                        <td><input type="button" value="2" class="button" onClick="display('2')"> </td>
+                        <td><input type="button" value="1" class="button" onClick="display('1')"> </td>
+                        <td><input type="button" value="+" class="operator" onClick="display('+')"></input> </td>  
+                    </tr>
+                    <tr>
+                        <!-- Ligne 5 pour le bouton Clear, le chiffre 0, la virgule et le signe égal -->
+                        <td><input type="button" value="C" onclick="clearScreen()" class="clear"></td>
+                        <td><input type="button" value="0" class="button" onClick="display('0')"> </td>
+                        <td><input type="button" value="." class="button" onClick="display('.')"></input> </td>
+                        <td><input type="button" value= "=" class="buttonEqual" onClick="solve()"></input> </td>  
+                    </tr>
+                </table>
+            </article>
+        </main>
+    </body>
+</html>

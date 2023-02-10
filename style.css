@@ -1,0 +1,139 @@
+body, html{
+	height: 100%;
+}
+
+body{
+	max-width: 1280px;
+	min-height: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: lightgray;
+	font-family: sans-serif;
+	background-image: url(https://artsy-media-uploads.s3.amazonaws.com/2P6t_Yt6dF0TNN76dlp-_Q%2F3417757448_4a6bdf36ce_o.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+/* Fonction Calculatrice */
+@font-face {
+    font-family: 'calculator';
+    src: url('Calculator.ttf');
+}
+.calculatrice{
+	display: grid;
+	background: rgb(159, 159, 159);
+	border-radius: 1em; 
+	align-items: center;
+}
+
+.calculatrice table{ 
+	width: 200px;
+	text-align: center;
+	border-spacing: 20%; 
+	caption-side: top; 
+	padding: 5%;
+}
+.calculatrice table td{
+	height: 2em; 
+}
+
+.calculatrice caption{
+	color: #2a2f2f;
+	padding: 2%;
+}
+.calculatrice .hide{
+	empty-cells: hide; 
+}
+
+.calculatrice .output{
+	height: 100%;
+	width: 95%;
+	border: none;
+	border-radius: 10px;
+	overflow: auto;
+	background-color: #2a2f2f;
+	font-family: 'Calculator';
+	text-align: right;
+	color: #7cd7d7;
+	font-size:1.5em;
+	
+}
+.calculatrice .clear {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #b61914;
+	color: cornsilk; 
+	
+}
+.calculatrice .clear:hover{
+	background-color: #ea261f;
+}
+.calculatrice .deleteScreen {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #d7631b; 
+	color: cornsilk;
+}
+.calculatrice .deleteScreen:hover{
+	background-color: #ff7a28;
+}
+
+.calculatrice .button {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	outline: none; 
+}
+.calculatrice .button:hover{
+	background-color: #b4d1d1;
+}
+.calculatrice .operator {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #3e5f5f;
+	color: #d3dedd; 
+	font-size: 1em;
+}
+.calculatrice .operator:hover{
+	background-color: #333a3a;
+}
+.calculatrice .buttonEqual {
+	height: 100%;
+	width: 100%;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #0b9959; 
+	color: cornsilk;
+}
+.calculatrice .buttonEqual:hover{
+	background-color: #0dbc6d;
+}
+
+
+/* Presntation de la page */
+.presentation{
+	margin: 0;
+	background:rgb(61, 61, 61);
+	color: cornsilk;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
