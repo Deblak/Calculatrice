@@ -13,9 +13,9 @@ La calculatrice dispose des fonctionnalités suivantes :
 
 #Comment utiliser la calculatrice
 
-Ouvrez le fichier index.html dans votre navigateur.
+Retrouvez la calculatrice directement via le lien : https://deblak.github.io/Calculatrice/
 Utilisez les touches de la calculatrice pour entrer vos calculs.
-Utilisez la touche "del" pour effacer la dernière entrée.
+Utilisez la touche "DEL" pour effacer la dernière entrée.
 Utilisez la touche "C" pour effacer tout le calcul en cours.
 
 #Problèmes rencontrés
