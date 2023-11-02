@@ -18,7 +18,7 @@ Retrouvez la calculatrice directement via le lien : https://deblak.github.io/Cal
 - Utilisez la touche "C" ou appuyez sur la touche C pour effacer tout le calcul en cours.
 - Avec le clavier appuyez sur la touche R pour résoudre le calcul.
 
-#Problèmes rencontrés
+#Problèmes rencontrés :
 La difficulté durant ce projet a été de créer les touches Résoudre (égal), Delete et Cancel avec le clavier pour être compatible sur la plupart des navigateurs. 
 
 #Pour conclure :
