@@ -1,139 +1,142 @@
-body, html{
-	height: 100%;
-}
-
-body{
-	max-width: 1280px;
-	min-height: 100%;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background: lightgray;
-	font-family: sans-serif;
-	background-image: url(https://artsy-media-uploads.s3.amazonaws.com/2P6t_Yt6dF0TNN76dlp-_Q%2F3417757448_4a6bdf36ce_o.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-
-/* Fonction Calculatrice */
 @font-face {
     font-family: 'calculator';
-    src: url('Calculator.ttf');
+    src: url('Calculator.ttf') format('truetype');
 }
-.calculatrice{
-	display: grid;
-	background: rgb(159, 159, 159);
-	border-radius: 1em; 
-	align-items: center;
-}
-
-.calculatrice table{ 
-	width: 200px;
-	text-align: center;
-	border-spacing: 20%; 
-	caption-side: top; 
-	padding: 5%;
-}
-.calculatrice table td{
-	height: 2em; 
-}
-
-.calculatrice caption{
-	color: #2a2f2f;
-	padding: 2%;
-}
-.calculatrice .hide{
-	empty-cells: hide; 
+:root {
+    --primary-color: lightgray;
+    --secondary-color: #2a2f2f;
+	--terciary-color: #acacac;
+	--primary-color-light: #d3dedd;
+	--output-color: #7cd7d7;
+    --button-background: #b4d1d1;
+    --operator-background: #3e5f5f;
+	--operator-hover: #333a3a;
+	--equal-background: #0b9959;
+	--equal-hover: #0dbc6d;
+	--delete-background: #d7631b;
+	--delete-hover: #ff7a28;
+    --clear-background: #b61914;
+    --clear-hover: #ea261f;
+    --button-border-radius: 10px;
+    --button-shadow: 2px 2px 5px #888888;
 }
 
-.calculatrice .output{
-	height: 100%;
-	width: 95%;
-	border: none;
-	border-radius: 10px;
-	overflow: auto;
-	background-color: #2a2f2f;
-	font-family: 'Calculator';
-	text-align: right;
-	color: #7cd7d7;
-	font-size:1.5em;
-	
+body, html {
+    height: 100%;
 }
-.calculatrice .clear {
-	height: 100%;
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	outline: none;
-	background-color: #b61914;
-	color: cornsilk; 
-	
+
+body {
+    max-width: 1280px;
+    min-height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    font-family: 'calculator', sans-serif;
+    background-image: url(https://artsy-media-uploads.s3.amazonaws.com/2P6t_Yt6dF0TNN76dlp-_Q%2F3417757448_4a6bdf36ce_o.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.calculatrice .clear:hover{
-	background-color: #ea261f;
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .calculatrice table {
+        width: 80%;
+    }
 }
-.calculatrice .deleteScreen {
-	height: 100%;
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	outline: none;
-	background-color: #d7631b; 
+
+/* Autres Media Queries pour les autres types d'écrans (tablettes, ordinateurs portables, grands écrans de bureau) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .calculatrice table {
+        width: 60%;
+    }
+}
+
+.calculatrice {
+    background: var(--terciary-color);
+    display: grid;
+    max-width: 1280px;
+    width: 100%;
+    border-radius: 1em;
+    align-items: center;
+}
+
+.calculatrice table {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border-spacing: 20%;
+    caption-side: top;
+    padding: 5%;
+}
+
+.calculatrice caption {
+    color: var(--secondary-color);
+    padding: 2%;
+}
+
+.calculatrice .output {
+    height: 100px;
+    width: 95%;
+    border: none;
+    border-radius: 10px;
+    padding-right: 1em;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: var(--secondary-color);
+    font-family: 'calculator', sans-serif;
+    text-align: right;
+    color: var(--output-color);
+    font-size: 2.5em;
+}
+
+/* Styles pour tous les boutons */
+.calculatrice button {
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: var(--button-border-radius);
+    outline: none;
+    font-size: 1.5em;
+    box-shadow: var(--button-shadow);
+}
+
+.calculatrice .button:hover {
+    background-color: var(--primary-color-light);
+}
+
+/* Styles des boutons spéciaux */
+.operator {
+    background-color: var(--operator-background);
+    color: var(--primary-color-light);
+}
+.operator:hover {
+	background-color: var(--operator-hover);
+}
+
+.buttonEqual{
+	background-color: var(--equal-background);
 	color: cornsilk;
 }
-.calculatrice .deleteScreen:hover{
-	background-color: #ff7a28;
+.buttonEqual:hover{
+	background-color: var(--equal-hover);
 }
 
-.calculatrice .button {
-	height: 100%;
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	outline: none; 
-}
-.calculatrice .button:hover{
-	background-color: #b4d1d1;
-}
-.calculatrice .operator {
-	height: 100%;
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	outline: none;
-	background-color: #3e5f5f;
-	color: #d3dedd; 
-	font-size: 1em;
-}
-.calculatrice .operator:hover{
-	background-color: #333a3a;
-}
-.calculatrice .buttonEqual {
-	height: 100%;
-	width: 100%;
-	border: none;
-	border-radius: 10px;
-	outline: none;
-	background-color: #0b9959; 
+.deleteScreen{
+	background-color: var(--delete-background);
 	color: cornsilk;
 }
-.calculatrice .buttonEqual:hover{
-	background-color: #0dbc6d;
+.deleteScreen:hover{
+	background-color: var(--delete-hover);
 }
 
-
-/* Presntation de la page */
-.presentation{
-	margin: 0;
-	background:rgb(61, 61, 61);
-	color: cornsilk;
-	position:absolute;
-	bottom:0;
-	width:100%;
-	padding-top: 5px;
-	padding-bottom: 5px;
+.clear {
+    background-color: var(--clear-background);
+    color: cornsilk;
+}
+.clear:hover {
+    background-color: var(--clear-hover);
 }
