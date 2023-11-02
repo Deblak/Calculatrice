@@ -11,6 +11,7 @@ La calculatrice permet :
 - Effacer tout le calcul en cours
 
 #Comment utiliser la calculatrice
+
 Retrouvez la calculatrice directement via le lien : https://deblak.github.io/Calculatrice/
 
 - Utilisez les touches de la calculatrice ou le clavier pour entrer vos calculs.
